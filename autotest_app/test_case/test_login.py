@@ -13,7 +13,7 @@ import time
 class LoginTest(myunit.MyTestInit):
     u"""登录"""
     
-    def user_login_verify(self,username="jsli",password="123456"):
+    def user_login_verify(self,username="",password=""):
         Login(self.driver).user_login(username,password)
 
     # 检查用户名、密码正确
@@ -21,7 +21,7 @@ class LoginTest(myunit.MyTestInit):
         u"""用户名、密码正确"""
         po=Login(self.driver)
         po.handle_splash_screen()
-        self.user_login_verify(username="jsli",password="123456")
+        self.user_login_verify(username="username",password="password")
         time.sleep(5)
 
         #print self.driver
