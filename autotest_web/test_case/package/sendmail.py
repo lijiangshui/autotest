@@ -7,7 +7,7 @@ import smtplib, datetime
 
 
 def send_mail_attach(filename):
-	mail_host="mail.chinacreator.com"  # 设置服务器
+	mail_host="mail.163.com"  # 设置服务器
 	mail_user="jiangshui.li"    # 用户名
 	mail_pass="109079"   # 口令 
 	msg = MIMEMultipart()
@@ -16,19 +16,19 @@ def send_mail_attach(filename):
 	att["Content-Disposition"] = 'attachment; filename="report.html"'
 	msg.attach(att)
 	
-	msg['From'] = 'jiangshui.li@chinacreator.com'
+	msg['From'] = 'jiangshui.li@163.com'
 	
 	#receivers = """
-	#	guiqiang.bian@chinacreator.com,
+	#	guiqiang.bian@163.com,
 	#	302416046@qq.com,
-	#	shaobin.he@chinacreator.com
+	#	shaobin.he@163.com
 	#"""
 	receivers = """
 		302416046@qq.com
 
 	"""
 	ccs = """
-		jiangshui.li@chinacreator.com
+		jiangshui.li@163.com
 	"""
 
 	msg['To'] = receivers 	# 主送
